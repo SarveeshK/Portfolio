@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-corporate-dark: #111111;
+  --color-corporate-darker: #000000;
+  --color-corporate-light: #f8fafc;
+  --color-corporate-lighter: #ffffff;
+  
+  --color-corporate-accent: #3b82f6;
+  --color-corporate-accent-hover: #2563eb;
+}
+
+@layer base {
+  :root {
+    --bg-primary: var(--color-corporate-light);
+    --bg-secondary: var(--color-corporate-lighter);
+    --text-primary: var(--color-corporate-darker);
+    --text-secondary: #475569;
+    --border-color: #e2e8f0;
+    --accent-color: var(--color-corporate-accent);
+  }
+
+  .dark {
+    --bg-primary: var(--color-corporate-darker);
+    --bg-secondary: var(--color-corporate-dark);
+    --text-primary: var(--color-corporate-light);
+    --text-secondary: #94a3b8;
+    --border-color: #1e293b;
+    --accent-color: var(--color-corporate-accent);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .dark .glass-panel {
+    background: rgba(17, 17, 17, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
