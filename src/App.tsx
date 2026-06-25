@@ -27,7 +27,7 @@ function App() {
       const path = window.location.pathname;
       // If on a non-root path (e.g. /about, /resume), show 404
       const isUnknownPath = path !== "/" && path !== "/index.html";
-      const isUnknownHash = hash && !VALID_HASHES.includes(hash);
+      const isUnknownHash = Boolean(hash && !VALID_HASHES.includes(hash));
       setIs404(isUnknownPath || isUnknownHash);
     };
     checkRoute();
