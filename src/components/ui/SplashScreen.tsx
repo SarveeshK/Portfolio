@@ -45,8 +45,8 @@ export const SplashScreen = ({ onComplete }: { onComplete: () => void }) => {
                 <div className="w-3.5 h-3.5 rounded-full bg-[#ffbd2e] border border-[#dea123]" />
                 <div className="w-3.5 h-3.5 rounded-full bg-[#27c93f] border border-[#1aab29]" />
               </div>
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="text-sm font-mono text-[#8b949e]">bash - sarveesh@portfolio:~</span>
+              <div className="absolute left-[76px] right-[76px] top-0 bottom-0 flex items-center justify-center pointer-events-none">
+                <span className="text-[11px] sm:text-sm font-mono text-[#8b949e] truncate">bash - sarveesh@portfolio:~</span>
               </div>
             </div>
 
