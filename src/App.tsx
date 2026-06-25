@@ -10,6 +10,7 @@ import { Certifications } from "./components/Certifications";
 import { Contact } from "./components/Contact";
 import { NotFound } from "./components/NotFound";
 import { ScrollProgress } from "./components/ui/ScrollProgress";
+import { SplashScreen } from "./components/ui/SplashScreen";
 import ClickSpark from "./components/ui/ClickSpark";
 import DotField from "./components/ui/DotField";
 
@@ -19,6 +20,7 @@ const VALID_HASHES = ["", "#", "#about", "#projects", "#experience", "#skills", 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => document.documentElement.classList.contains('dark'));
   const [is404, setIs404] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
   // Hash-based 404 detection
   useEffect(() => {
@@ -47,6 +49,14 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (showSplash && !is404) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+  }, [showSplash, is404]);
+
   const gradientFrom = isDarkMode ? 'rgba(168, 85, 247, 0.8)' : 'rgba(59, 130, 246, 0.8)';
   const gradientTo = isDarkMode ? 'rgba(180, 151, 207, 0.6)' : 'rgba(147, 197, 253, 0.6)';
   const glowColor = isDarkMode ? 'rgba(10, 10, 10, 1)' : 'rgba(255, 255, 255, 1)';
@@ -61,14 +71,17 @@ function App() {
   }
 
   return (
-    <ClickSpark
-      sparkColor="#3b82f6"
-      sparkSize={12}
-      sparkRadius={20}
-      sparkCount={8}
-      duration={600}
-    >
-      <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300 relative">
+    <>
+      {showSplash && !is404 && <SplashScreen onComplete={() => setShowSplash(false)} />}
+      
+      <ClickSpark
+        sparkColor="#3b82f6"
+        sparkSize={12}
+        sparkRadius={20}
+        sparkCount={8}
+        duration={600}
+      >
+        <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300 relative">
         {/* Scroll progress bar — pinned above everything */}
         <ScrollProgress />
 
@@ -103,6 +116,7 @@ function App() {
         </div>
       </div>
     </ClickSpark>
+    </>
   );
 }
 
