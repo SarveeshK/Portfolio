@@ -28,7 +28,7 @@ const StatCard = ({ stat, index }: { stat: typeof stats[0]; index: number }) => 
         edgeSensitivity={30}
         glowColor="217 91 60"
         backgroundColor="var(--bg-primary)"
-        borderRadius={14}
+        borderRadius={8}
         glowRadius={40}
         glowIntensity={1}
         coneSpread={25}
