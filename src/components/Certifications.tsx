@@ -130,7 +130,7 @@ export const Certifications = () => {
         <Reveal delay={0.6} width="100%">
           <div className="mt-12 md:mt-20">
             <h3 className="text-xl md:text-3xl font-bold mb-6 md:mb-8 text-center">Verified Credentials</h3>
-            <div className="flex justify-center">
+            <div className="flex justify-center gap-6 flex-wrap">
               <BorderGlow
                 edgeSensitivity={30}
                 glowColor="217 91 60"
@@ -147,6 +147,25 @@ export const Certifications = () => {
                   data-iframe-width="150" 
                   data-iframe-height="270" 
                   data-share-badge-id="b0b026e2-5384-4db3-8c1e-662066fbba8a" 
+                  data-share-badge-host="https://www.credly.com"
+                ></div>
+              </BorderGlow>
+              <BorderGlow
+                edgeSensitivity={30}
+                glowColor="217 91 60"
+                backgroundColor="white"
+                borderRadius={16}
+                glowRadius={40}
+                glowIntensity={1}
+                coneSpread={25}
+                animated={false}
+                colors={['#3b82f6', '#94a3b8', '#64748b']}
+                className="shadow-lg hover:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-shadow p-6"
+              >
+                <div 
+                  data-iframe-width="150" 
+                  data-iframe-height="270" 
+                  data-share-badge-id="23505bfa-bbfe-495a-9c73-aafc6903e0f6" 
                   data-share-badge-host="https://www.credly.com"
                 ></div>
               </BorderGlow>

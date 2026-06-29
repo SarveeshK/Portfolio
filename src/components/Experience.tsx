@@ -150,19 +150,13 @@ export const Experience = () => {
                     MOBILE — left-rail layout
                 ══════════════════════════════ */}
                 {/* Dot */}
-                <motion.div
-                  initial={{ scale: 0, opacity: 0 }}
-                  whileInView={{ scale: [0, 1.4, 1], opacity: 1 }}
-                  viewport={{ once: true, margin: "-40px" }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                  className="md:hidden absolute left-[11px] -translate-x-1/2 top-5 w-[14px] h-[14px] rounded-full bg-[var(--accent-color)] border-[3px] border-[var(--bg-secondary)] z-10"
-                >
+                <div className="md:hidden absolute left-[11px] -translate-x-[45%] top-8 w-4 h-4 rounded-full bg-[var(--accent-color)] border-4 border-[var(--bg-secondary)] z-20">
                   <motion.div
-                    animate={{ scale: [1, 1.6, 1], opacity: [0.4, 0, 0.4] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                    className="w-full h-full rounded-full bg-[var(--accent-color)]"
+                    animate={{ scale: [1, 1.8, 1], opacity: [0.4, 0, 0.4] }}
+                    transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute inset-0 rounded-full bg-[var(--accent-color)]"
                   />
-                </motion.div>
+                </div>
 
                 {/* Card — slides in from left */}
                 <motion.div

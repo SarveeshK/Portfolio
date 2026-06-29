@@ -81,7 +81,7 @@ function App() {
         sparkCount={8}
         duration={600}
       >
-        <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300 relative">
+        <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] transition-colors duration-300 relative overflow-x-hidden">
         {/* Scroll progress bar — pinned above everything */}
         <ScrollProgress />
 
