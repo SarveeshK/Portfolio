@@ -38,8 +38,8 @@ export const Projects = () => {
       demo: ""
     },
     {
-      title: "Agri Robot Perception System",
-      description: "AI-powered computer vision system capable of detecting coconut trees using a custom-trained YOLOv8 model for autonomous farming robots.",
+      title: "AgriVision",
+      description: "An AI-powered perception system for autonomous agricultural robots. Operates in coconut farms to detect all trees and tree-like obstacles for safe path planning using a custom YOLOv8 model.",
       image: "/coconut.png",
       tags: ["Python", "YOLOv8", "OpenCV", "Machine Learning"],
       metric: "High accuracy edge detection",
